@@ -1,12 +1,14 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
+  <CounterComponent/>
 </template>
 
 <script>
-
+import { defineAsyncComponent } from 'vue';
 export default {
   name: 'App',
   components: {
+    CounterComponent: defineAsyncComponent(() => import('./components/Counter'))
   }
 }
 </script>
